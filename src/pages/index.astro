@@ -18,8 +18,11 @@ import showcaseLarge from "../assets/showcaseLarge.png";
 <Layout title="Green Thumbs Gardening - Home">
   <main>
     <section id="heroSection" class="flex bg-gPrimary text-gBright">
-      <div class="w-[50%] flex flex-col items-center gap-5 py-64">
-        <span class="flex text-5xl w-[60%] font-[600] items-center">
+      <div class="w-[50%] flex flex-col items-end gap-5 py-64">
+        <span
+          id="heroBrand"
+          class="flex text-5xl w-[60%] font-[600] items-center"
+        >
           <img
             class="object-contain h-full"
             src={brandLogo.src}
@@ -35,7 +38,7 @@ import showcaseLarge from "../assets/showcaseLarge.png";
             Let's start the journey to your dream garden together.
           </div>
         </div>
-        <div>
+        <div class="w-[60%] flex justify-center">
           <MainButton>DIG IN!</MainButton>
         </div>
       </div>

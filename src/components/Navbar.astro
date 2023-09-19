@@ -1,13 +1,22 @@
 ---
 import { Icon } from "astro-icon";
+import brandLogo from "../assets/brandLogo.png";
 ---
 
 <nav
   class="z-10 bg-gPrimary text-gBright w-full flex font-semibold gap-20 sticky top-0"
 >
-  <span id="brandLogo" class="font-extrabold text-3xl py-6 pl-8 mr-auto"
-    >GREEN THUMBS</span
+  <div
+    id="brandLogo"
+    class="font-extrabold text-3xl py-6 pl-8 mr-auto flex items-center gap-3 transition-opacity"
   >
+    <img
+      class="object-contain w-[50px] h-[50px]"
+      src={brandLogo.src}
+      alt="brand logo"
+    />
+     GREEN THUMBS
+  </div>
   <ul id="navMenu" class="flex gap-20 items-center uppercase">
     <li>Home</li>
     <li>About</li>
@@ -20,3 +29,23 @@ import { Icon } from "astro-icon";
      SEARCH
   </button>
 </nav>
+
+<script>
+  const navBrand = document.querySelector<HTMLDivElement>("#brandLogo");
+  const target = document.querySelector<HTMLSpanElement>("#heroBrand");
+
+  if (target && navBrand) {
+    const observerCallback = (
+      entries: IntersectionObserverEntry[],
+      observer: IntersectionObserver
+    ) => {
+      navBrand.style.opacity = `${Math.round(
+        1 - entries[0].intersectionRatio
+      )}`;
+    };
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: [0, 1],
+    });
+    observer.observe(target);
+  }
+</script>
