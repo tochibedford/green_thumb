@@ -11,6 +11,7 @@ interface Props {
 
 const { title } = Astro.props;
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -26,6 +27,7 @@ import Navbar from "../components/Navbar.astro";
   <body class="h-full">
     <Navbar />
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
