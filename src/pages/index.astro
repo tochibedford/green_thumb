@@ -11,6 +11,8 @@ import reason1 from "../assets/reason1.png";
 import reason2 from "../assets/reason2.png";
 import reason3 from "../assets/reason3.png";
 import reason4 from "../assets/reason4.png";
+import showcaseSmall from "../assets/showcaseSmall.png";
+import showcaseLarge from "../assets/showcaseLarge.png";
 ---
 
 <Layout title="Green Thumbs Gardening - Home">
@@ -101,10 +103,20 @@ import reason4 from "../assets/reason4.png";
       </div>
     </section>
     <section class="py-16 flex justify-center">
-      <div class="w-[1440px] h-[700px] bg-gray-900 flex">
-        <div class="flex-[0.4] bg-gray-800"></div>
-        <div class="flex-[0.6] bg-red-800">
-          <img src="" alt="" />
+      <div class="w-[1440px] h-[700px] flex">
+        <div class="flex-[0.3] relative">
+          <img
+            class="w-full h-full object-contain absolute left-[30%]"
+            src={showcaseSmall.src}
+            alt="showcase small image"
+          />
+        </div>
+        <div class="flex-[0.7] bg-red-800">
+          <img
+            class="h-full object-cover"
+            src={showcaseLarge.src}
+            alt="showcase large image"
+          />
         </div>
       </div>
     </section>
