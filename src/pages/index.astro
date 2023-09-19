@@ -1,30 +1,59 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import brandLogo from "../assets/brandLogo.png"
-import MainButton from '../components/MainButton.astro';
+import Layout from "../layouts/Layout.astro";
+import brandLogo from "../assets/brandLogo.png";
+import MainButton from "../components/MainButton.astro";
+import heroImage1 from "../assets/heroImage1.png";
+import heroImage2 from "../assets/heroImage2.png";
+import heroImage3 from "../assets/heroImage3.png";
 ---
 
 <Layout title="Green Thumbs Gardening - Home">
-	<main class="bg-gPrimary border-t">
-		<section id="heroSection" class="flex text-gBright">
-			<div class="flex-1 flex flex-col items-center gap-5 py-64">
-				<span class="flex text-5xl w-[60%] font-[600] items-center">
-					<img class="object-contain h-full" src={brandLogo.src} alt="brand logo">
-					<div>GREEN THUMBS GARDENING</div>
-				</span>
-				<div class="w-[60%]">
-					<div class="uppercase text-2xl px-3">Your oasis of tranquility awaits!</div>
-					<div class="text-xl w-[75%] px-3 opacity-90 font-normal">Let's start the journey to your dream garden together.</div>
-				</div>
-				<div>
-					<MainButton>DIG IN!</MainButton>
-				</div>
-			</div>
-			<div class="flex-1 bg-red-500">
-
-			</div>
-		</section>
-		
-		
-	</main>
+  <main class="bg-gPrimary">
+    <section id="heroSection" class="flex text-gBright">
+      <div class="w-[50%] flex flex-col items-center gap-5 py-64">
+        <span class="flex text-5xl w-[60%] font-[600] items-center">
+          <img
+            class="object-contain h-full"
+            src={brandLogo.src}
+            alt="brand logo"
+          />
+          <div>GREEN THUMBS GARDENING</div>
+        </span>
+        <div class="w-[60%]">
+          <div class="uppercase text-2xl px-3">
+            Your oasis of tranquility awaits!
+          </div>
+          <div class="text-xl w-[75%] px-3 opacity-90 font-normal">
+            Let's start the journey to your dream garden together.
+          </div>
+        </div>
+        <div>
+          <MainButton>DIG IN!</MainButton>
+        </div>
+      </div>
+      <div class="w-[50%] flex flex-col gap-2 justify-center py-10 px-32">
+        <div class="">
+          <img
+            class="h-full w-[400px] object-contain"
+            src={heroImage1.src}
+            alt="hero showcase 1"
+          />
+        </div>
+        <div class="flex justify-end">
+          <img
+            class="h-full w-[400px] object-contain"
+            src={heroImage2.src}
+            alt="hero showcase 2"
+          />
+        </div>
+        <div class="pl-10">
+          <img
+            class="h-full w-[400px] object-contain"
+            src={heroImage3.src}
+            alt="hero showcase 3"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
