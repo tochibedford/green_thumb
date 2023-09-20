@@ -1,4 +1,4 @@
-# Tochi's Gardening Website Kit
+# Tochi's Gardening Website Kit 🌱
 
 ```sh
 npm create astro@latest -- --template tochibedford/green_thumb
