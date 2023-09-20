@@ -95,10 +95,7 @@ import brandLogo from "../assets/brandLogo.png";
   const target = document.querySelector<HTMLSpanElement>("#heroBrand");
 
   if (target && navBrand) {
-    const observerCallback = (
-      entries: IntersectionObserverEntry[],
-      observer: IntersectionObserver
-    ) => {
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
       navBrand.style.opacity = `${Math.round(
         1 - entries[0].intersectionRatio
       )}`;
