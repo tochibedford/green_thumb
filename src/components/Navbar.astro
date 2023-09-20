@@ -7,7 +7,7 @@ import brandLogo from "../assets/brandLogo.png";
   <div class="flex gap-10 container">
     <div
       id="brandLogo"
-      class="font-extrabold text-3xl 2xl:text-xl py-6 2xl:py-3 pl-8 mr-auto flex items-center gap-3 2xl:gap-1 transition-opacity"
+      class="font-extrabold text-3xl 2xl:text-xl md:text-base py-6 2xl:py-3 md:py-2 pl-8 md:pl-2 mr-auto flex items-center gap-3 2xl:gap-1 transition-opacity"
     >
       <img
         class="object-contain w-[50px] h-[50px]"
@@ -16,7 +16,10 @@ import brandLogo from "../assets/brandLogo.png";
       />
        GREEN THUMBS
     </div>
-    <ul id="navMenu" class="flex gap-20 2xl:gap-10 items-center uppercase">
+    <ul
+      id="navMenu"
+      class="flex gap-20 2xl:gap-10 items-center uppercase md:hidden"
+    >
       <li class="max-w-[100px] text-ellipsis whitespace-nowrap overflow-hidden">
         <a href="/">Home</a>
       </li>
@@ -33,12 +36,59 @@ import brandLogo from "../assets/brandLogo.png";
         <a href="">Gardening</a>
       </li>
     </ul>
-    <button class="px-6 bg-gPrimaryLight flex items-center gap-2">
+    <button class="px-6 bg-gPrimaryLight flex items-center gap-2 md:hidden">
       <Icon class="flex-1 w-6 h-6" name="mdi:magnify" />
        SEARCH
     </button>
+
+    <!-- mobile burger menu -->
+    <div class="px-6 bg-gPrimaryLight relative flex items-center">
+      <input
+        id="burger_check"
+        type="checkbox"
+        class="absolute w-full h-full cursor-pointer left-0 top-0 opacity-0 z-10"
+      />
+      <div
+        id="burger_closed"
+        class="w-[32px] h-[25px] flex flex-col justify-between relative transition-all"
+      >
+        <div class="border-current border"></div>
+        <div class="border-current border"></div>
+        <div class="border-current border"></div>
+      </div>
+      <div
+        id="burger_opened"
+        class="w-[32px] h-[25px] flex flex-col justify-between absolute"
+      >
+        <div
+          class="border-current border absolute top-[50%] translate-y-[-50%] w-full transition-all"
+        >
+        </div>
+        <div
+          class="border-current border absolute top-[50%] translate-y-[-50%] w-full transition-all"
+        >
+        </div>
+      </div>
+    </div>
   </div>
 </nav>
+
+<style>
+  #burger_check:checked ~ #burger_closed {
+    opacity: 0;
+  }
+
+  #burger_check:checked ~ #burger_opened {
+    opacity: 1;
+  }
+
+  #burger_check:checked ~ #burger_opened div:first-child {
+    rotate: 45deg;
+  }
+  #burger_check:checked ~ #burger_opened div:nth-child(2) {
+    rotate: -45deg;
+  }
+</style>
 
 <script>
   const navBrand = document.querySelector<HTMLDivElement>("#brandLogo");
