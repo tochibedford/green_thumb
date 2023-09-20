@@ -41,7 +41,7 @@ Inside of this Astro template, you'll see the following project structure:
 ```text
 📦green_thumb
  ┣ 📂public
- ┃ ┗ 📜favicon.svg
+ ┃ ┗ 📜favicon.png
  ┣ 📂src
  ┃ ┣ 📂assets
  ┃ ┃ ┣ 📜...png
