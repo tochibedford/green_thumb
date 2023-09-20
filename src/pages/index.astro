@@ -63,6 +63,8 @@ import showcaseLarge from "../assets/showcaseLarge.png";
               class="h-full w-[350px] 2xl:w-[300px] lg:w-[200px] md:w-[300px] object-contain"
               src={heroImage1.src}
               alt="hero showcase 1"
+              data-custom-parallax
+              data-custom-parallax-horizontal="0.5"
             />
           </div>
           <div class="flex justify-end">
@@ -70,6 +72,8 @@ import showcaseLarge from "../assets/showcaseLarge.png";
               class="h-full w-[350px] 2xl:w-[300px] lg:w-[200px] md:w-[300px] object-contain"
               src={heroImage2.src}
               alt="hero showcase 2"
+              data-custom-parallax
+              data-custom-parallax-horizontal="-0.3"
             />
           </div>
           <div class="pl-10 sm:pl-0">
@@ -77,6 +81,8 @@ import showcaseLarge from "../assets/showcaseLarge.png";
               class="h-full w-[350px] 2xl:w-[300px] lg:w-[200px] md:w-[300px] object-contain"
               src={heroImage3.src}
               alt="hero showcase 3"
+              data-custom-parallax
+              data-custom-parallax-horizontal="0.3"
             />
           </div>
         </div>
@@ -137,6 +143,8 @@ import showcaseLarge from "../assets/showcaseLarge.png";
               class="w-full h-full 2xl:w-[80%] object-contain absolute left-[30%]"
               src={showcaseSmall.src}
               alt="showcase small image"
+              data-custom-parallax
+              data-custom-parallax-horizontal="-0.03"
             />
           </div>
           <div class="flex-[0.7] flex items-center">
@@ -144,6 +152,8 @@ import showcaseLarge from "../assets/showcaseLarge.png";
               class="h-full object-cover 2xl:object-contain"
               src={showcaseLarge.src}
               alt="showcase large image"
+              data-custom-parallax
+              data-custom-parallax-horizontal="0.03"
             />
           </div>
         </div>
@@ -156,8 +166,10 @@ import showcaseLarge from "../assets/showcaseLarge.png";
         >
           CONTACT US
         </h3>
+        <!-- REPLACE WITH YOUR OWN Form-spark url -->
         <form
           class="flex flex-col gap-5 text-xl 2xl:text-lg w-[500px] sm:w-full"
+          action="https://submit-form.com/l45wBLfM"
         >
           <div class="flex flex-col gap-2">
             <label for="email">Email <span class="text-red-500">*</span></label>
@@ -180,7 +192,7 @@ import showcaseLarge from "../assets/showcaseLarge.png";
               placeholder="Type your message here"></textarea>
           </div>
           <div class="flex justify-end">
-            <MainButton>
+            <MainButton type="submit">
               <span class="text-gBright text-xl 2xl:text-lg">SUBMIT</span>
             </MainButton>
           </div>

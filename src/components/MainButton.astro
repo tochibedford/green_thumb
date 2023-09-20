@@ -1,3 +1,10 @@
-<button class="px-5 py-3 font-medium text-2xl bg-gPrimaryLight hover:opacity-95">
-    <slot />
+---
+const { type } = Astro.props;
+---
+
+<button
+  type={type}
+  class="px-5 py-3 font-medium text-2xl bg-gPrimaryLight hover:opacity-95"
+>
+  <slot />
 </button>
