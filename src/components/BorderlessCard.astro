@@ -5,8 +5,10 @@ const { imageSrc, caption } = Astro.props;
 <div
   class="text-center flex flex-col gap-2 max-w-[150px] 2xl:max-w-[100px] items-center"
 >
-  <div class="w-[150px] h-[150px] 2xl:w-[100px] 2xl:h-[100px]">
+  <div
+    class="w-[150px] h-[150px] 2xl:w-[100px] 2xl:h-[100px] sm:w-[80px] sm:h-[80px]"
+  >
     <img class="object-contain w-full" src={imageSrc} alt="reason" />
   </div>
-  <div class="uppercase text-xl 2xl:text-lg">{caption}</div>
+  <div class="uppercase text-xl 2xl:text-lg sm:text-base">{caption}</div>
 </div>

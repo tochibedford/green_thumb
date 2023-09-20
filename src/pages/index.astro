@@ -15,7 +15,6 @@ import showcaseSmall from "../assets/showcaseSmall.png";
 import showcaseLarge from "../assets/showcaseLarge.png";
 ---
 
-<!-- TODO: Pick up from lg breakpoint -->
 <Layout title="Green Thumbs Gardening - Home">
   <main>
     <section id="heroSection" class="bg-gPrimary text-gBright">
@@ -25,25 +24,27 @@ import showcaseLarge from "../assets/showcaseLarge.png";
         >
           <span
             id="heroBrand"
-            class="flex text-5xl 2xl:text-3xl w-[80%] 2xl:w-[70%] md:w-auto font-[600] items-center"
+            class="flex text-5xl 2xl:text-3xl lg:text-xl w-[80%] 2xl:w-[70%] lg:w-[90%] md:w-auto sm:justify-center font-[600] sm:text-center items-center"
           >
-            <div class="w-[130px] h-[130px] 2xl:w-[100px] 2xl:h-[100px]">
+            <div
+              class="w-[130px] h-[130px] 2xl:w-[100px] 2xl:h-[100px] lg:w-[80px] lg:h-[80px]"
+            >
               <img
                 class="object-contain h-full"
                 src={brandLogo.src}
                 alt="brand logo"
               />
             </div>
-            <h1>GREEN THUMBS GARDENING</h1>
+            <h1 class="sm:w-min">GREEN THUMBS GARDENING</h1>
           </span>
           <div
-            class="w-[80%] 2xl:w-[70%] md:text-center flex flex-col items-center"
+            class="w-[80%] 2xl:w-[70%] lg:w-[90%] md:text-center flex flex-col items-center"
           >
-            <div class="uppercase text-2xl 2xl:text-lg px-3">
+            <div class="uppercase text-2xl 2xl:text-lg lg:text-base px-3">
               Your oasis of tranquility awaits!
             </div>
             <div
-              class="text-xl 2xl:text-base w-[75%] px-3 font-normal md:text-center"
+              class="text-xl 2xl:text-base w-[75%] lg:w-[100%] px-3 font-normal md:text-center"
             >
               Let's start the journey to your dream garden together.
             </div>
@@ -59,21 +60,21 @@ import showcaseLarge from "../assets/showcaseLarge.png";
         >
           <div>
             <img
-              class="h-full w-[350px] 2xl:w-[300px] object-contain"
+              class="h-full w-[350px] 2xl:w-[300px] lg:w-[200px] md:w-[300px] object-contain"
               src={heroImage1.src}
               alt="hero showcase 1"
             />
           </div>
           <div class="flex justify-end">
             <img
-              class="h-full w-[350px] 2xl:w-[300px] object-contain"
+              class="h-full w-[350px] 2xl:w-[300px] lg:w-[200px] md:w-[300px] object-contain"
               src={heroImage2.src}
               alt="hero showcase 2"
             />
           </div>
-          <div class="pl-10">
+          <div class="pl-10 sm:pl-0">
             <img
-              class="h-full w-[350px] 2xl:w-[300px] object-contain"
+              class="h-full w-[350px] 2xl:w-[300px] lg:w-[200px] md:w-[300px] object-contain"
               src={heroImage3.src}
               alt="hero showcase 3"
             />
@@ -89,7 +90,9 @@ import showcaseLarge from "../assets/showcaseLarge.png";
           >
             WHO WE ARE
           </h2>
-          <p class="container px-48 2xl:px-32 md:px-10 text-lg">
+          <p
+            class="container px-48 2xl:px-32 lg:px-20 md:px-10 sm:px-2 text-lg"
+          >
             At GreenThumb Gardens, we believe that a beautiful garden is the
             heart of a thriving home. Our passion for gardening and commitment
             to excellence have made us the go-to choice for all your gardening
@@ -105,7 +108,7 @@ import showcaseLarge from "../assets/showcaseLarge.png";
             WHY COOSE GREEN THUMBS
           </h3>
           <div
-            class="flex gap-20 md:flex-wrap md:w-[50%] md:mx-auto md:gap-y-1"
+            class="flex gap-20 md:flex-wrap md:w-[50%] md:mx-auto md:gap-y-1 md:justify-center"
           >
             <BorderlessCard imageSrc={reason1.src} caption="EXPERTISE" />
             <BorderlessCard
@@ -124,9 +127,11 @@ import showcaseLarge from "../assets/showcaseLarge.png";
         </div>
       </div>
     </section>
-    <section class="py-16 2xl:py-0 bg-gBright">
+    <section class="py-16 2xl:py-0 bg-gBright sm:hidden">
       <div class="flex justify-center container">
-        <div class="container h-[700px] 2xl:h-[500px] md:h-[300px] flex">
+        <div
+          class="container h-[700px] 2xl:h-[500px] lg:h-[300px] sm:h-[150px] flex"
+        >
           <div class="flex-[0.3] relative flex items-center">
             <img
               class="w-full h-full 2xl:w-[80%] object-contain absolute left-[30%]"
@@ -151,7 +156,9 @@ import showcaseLarge from "../assets/showcaseLarge.png";
         >
           CONTACT US
         </h3>
-        <form class="flex flex-col gap-5 text-xl 2xl:text-lg w-[500px]">
+        <form
+          class="flex flex-col gap-5 text-xl 2xl:text-lg w-[500px] sm:w-full"
+        >
           <div class="flex flex-col gap-2">
             <label for="email">Email <span class="text-red-500">*</span></label>
             <input
