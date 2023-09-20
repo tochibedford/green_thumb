@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import blogPosts from "../../blogposts";
+
+export function getStaticPaths() {
+  return blogPosts.map((post) => {
+    return { params: { postId: post.postId } };
+  });
+}
+
+const { postId } = Astro.params;
+const blogPost = blogPosts.find((post) => post.postId === postId);
+---
+
+<Layout title={`${blogPost?.title} - Green Thumbs`}>
+  <main class="bg-gBright text-bgShade">
+    <header>
+      <h1
+        class="container bg-white font-extrabold text-5xl lg:text-4xl md:text-3xl text-center flex flex-col items-center gap-10 py-10"
+      >
+        {blogPost?.title}
+        <img
+          class="w-[50%] lg:w-[70%] md:w-[90%]"
+          src={blogPost?.headerImage}
+          alt="blog post head image"
+        />
+      </h1>
+    </header>
+    <section
+      data-blog-post-content={JSON.stringify(blogPost?.content)}
+      id="content-container"
+      class="container bg-white whitespace-break-spaces"
+    >
+      {blogPost?.content}
+    </section>
+  </main>
+</Layout>
+
+<script>
+  const contentContainer = document.querySelector("#content-container");
+  if (contentContainer) {
+    contentContainer.innerHTML = JSON.parse(
+      contentContainer.getAttribute("data-blog-post-content") || ""
+    );
+  }
+</script>
