@@ -10,7 +10,13 @@ npm create astro@latest -- --template tochibedford/green_thumb
 - CSS - [TailwindCss](https://tailwindcss.com/)
 - Icons - [Astro-Icons](https://www.astroicon.dev/)
 
-Form collection is handled by [Form spark](https://formspark.io/)
+## ✨Features
+
+- Gardening Home Page
+- Blog Section
+- Blog Posts Page
+- Form collection is handled by [Form spark](https://formspark.io/)
+- Parallax scroll built-in
 
 ## Desktop-First
 
@@ -40,12 +46,20 @@ Inside of this Astro template, you'll see the following project structure:
  ┃ ┣ 📂assets
  ┃ ┃ ┣ 📜...png
  ┃ ┣ 📂components
- ┃ ┃ ┣ 📜...astro
+ ┃ ┃ ┣ 📜BlogCard.astro
+ ┃ ┃ ┣ 📜BorderlessCard.astro
+ ┃ ┃ ┣ 📜Footer.astro
+ ┃ ┃ ┣ 📜MainButton.astro
+ ┃ ┃ ┗ 📜Navbar.astro
  ┃ ┣ 📂layouts
  ┃ ┃ ┣ 📜Layout.astro
  ┃ ┃ ┗ 📜tailwindbase.css
  ┃ ┣ 📂pages
+ ┃ ┃ ┣ 📂blog
+ ┃ ┃ ┃ ┣ 📜index.astro
+ ┃ ┃ ┃ ┗ 📜[postId].astro
  ┃ ┃ ┗ 📜index.astro
+ ┃ ┣ 📜blogposts.ts
  ┃ ┗ 📜env.d.ts
  ┣ 📜.gitignore
  ┣ 📜astro.config.mjs
