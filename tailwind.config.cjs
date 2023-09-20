@@ -15,7 +15,7 @@ module.exports = {
       gPrimary: "#007157",
     },
     screens: {
-      //switch to desktop first
+      //delete to switch to mobile first
       "2xl": { max: "1439px" },
       xl: { max: "1279px" },
       lg: { max: "1023px" },
