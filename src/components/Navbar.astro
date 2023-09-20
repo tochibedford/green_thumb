@@ -1,13 +1,19 @@
 ---
 import { Icon } from "astro-icon";
 import brandLogo from "../assets/brandLogo.png";
+
+const dynamicHref: { href?: string } = {};
+if (Astro.url.pathname !== "/") {
+  dynamicHref.href = "/";
+}
 ---
 
 <nav class="z-10 bg-gPrimary text-gBright w-full font-semibold sticky top-0">
   <div class="flex gap-10 container">
-    <div
+    <a
       id="brandLogo"
-      class="font-extrabold text-3xl 2xl:text-xl md:text-base py-6 2xl:py-3 md:py-2 pl-8 md:pl-2 mr-auto flex items-center gap-3 2xl:gap-1 transition-opacity"
+      class="font-extrabold text-3xl 2xl:text-xl md:text-base py-6 2xl:py-3 md:py-2 pl-8 md:pl-2 mr-auto flex items-center gap-3 2xl:gap-1 opacity-1 transition-opacity"
+      {...dynamicHref}
     >
       <img
         class="object-contain w-[50px] h-[50px]"
@@ -15,7 +21,7 @@ import brandLogo from "../assets/brandLogo.png";
         alt="brand logo"
       />
        GREEN THUMBS
-    </div>
+    </a>
     <ul
       id="navMenu"
       class="flex gap-20 2xl:gap-10 items-center uppercase lg:hidden"
@@ -33,13 +39,38 @@ import brandLogo from "../assets/brandLogo.png";
         <a href="/blog">Blog</a>
       </li>
       <li class="max-w-[100px] text-ellipsis whitespace-nowrap overflow-hidden">
-        <a href="">Gardening</a>
+        <a href="/blog/gardening">Gardening</a>
       </li>
     </ul>
-    <button class="px-6 bg-gPrimaryLight flex items-center gap-2 lg:hidden">
+    <div
+      class="px-6 bg-gPrimaryLight flex items-center gap-2 lg:hidden relative"
+    >
+      <input
+        id="search_check"
+        type="checkbox"
+        class="absolute w-full h-full cursor-pointer left-0 top-0 z-10 opacity-0"
+      />
+      <form
+        action="/blog"
+        id="search_box"
+        class="absolute top-full right-0 text-2xl bg-gPrimaryLight w-[400px] px-4 h-16 flex items-center max-h-0 transition-all overflow-hidden"
+      >
+        <div class="flex">
+          <input
+            name="search"
+            class="w-full bg-transparent text-gBright placeholder:text-gBright placeholder:opacity-80 border-b focus:outline-none"
+            type="search"
+            placeholder="Search blog..."
+            autocomplete="off"
+          />
+          <button>
+            <Icon name="mdi:arrow-right" class="w-8 h-8" />
+          </button>
+        </div>
+      </form>
       <Icon class="flex-1 w-6 h-6" name="mdi:magnify" />
        SEARCH
-    </button>
+    </div>
 
     <!-- mobile burger menu -->
     <div class="px-6 bg-gPrimaryLight relative hidden lg:flex items-center">
@@ -95,20 +126,33 @@ import brandLogo from "../assets/brandLogo.png";
           <li
             class="hover:bg-gPrimary w-full py-3 text-center text-ellipsis whitespace-nowrap overflow-hidden flex"
           >
-            <a class="w-full h-full" href="">Plant Info</a>
+            <a class="w-full h-full" href="/blog">Blog</a>
           </li>
           <li
             class="hover:bg-gPrimary w-full py-3 text-center text-ellipsis whitespace-nowrap overflow-hidden flex"
           >
-            <a class="w-full h-full" href="">Gardening</a>
+            <a class="w-full h-full" href="/blog/gardening">Gardening</a>
           </li>
           <li
             class="hover:bg-gPrimary w-full py-3 text-ellipsis whitespace-nowrap overflow-hidden flex justify-center"
           >
-            <button class="px-6 py-6 flex justify-center items-center gap-2">
-              <Icon class="flex-1 w-6 h-6" name="mdi:magnify" />
-               SEARCH
-            </button>
+            <form
+              action="/blog"
+              id="search_box_mobile"
+              class="text-2xl bg-gPrimaryLight px-4 h-16 flex items-center transition-all overflow-hidden"
+            >
+              <input
+                name="search"
+                class="w-full bg-transparent text-gBright text-lg placeholder:text-gBright placeholder:opacity-80 border-b-2 focus:outline-none rounded-none"
+                type="search"
+                placeholder="Search blog..."
+                autocomplete="off"
+              />
+              <button>
+                <Icon name="mdi:arrow-right" class="w-8 h-8" />
+              </button>
+            </form>
+            <li></li>
           </li>
         </ul>
       </div>
@@ -117,6 +161,18 @@ import brandLogo from "../assets/brandLogo.png";
 </nav>
 
 <style>
+  input[type="search"] {
+    -webkit-appearance: none;
+  }
+
+  #search_box input::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  #search_check:checked ~ #search_box {
+    max-height: 4rem;
+  }
+
   #burger_check:checked ~ #burger_closed {
     opacity: 0;
   }
