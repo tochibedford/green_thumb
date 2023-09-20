@@ -19,48 +19,52 @@ import showcaseLarge from "../assets/showcaseLarge.png";
   <main>
     <section id="heroSection" class="bg-gPrimary text-gBright">
       <div class="flex container">
-        <div class="w-[50%] flex flex-col items-center gap-5 py-64">
+        <div class="w-[50%] flex flex-col items-center gap-5 2xl:gap-1 py-64">
           <span
             id="heroBrand"
-            class="flex text-5xl w-[80%] font-[600] items-center"
+            class="flex text-5xl 2xl:text-3xl w-[80%] 2xl:w-[70%] font-[600] items-center"
           >
-            <img
-              class="object-contain h-full"
-              src={brandLogo.src}
-              alt="brand logo"
-            />
+            <div class="w-[130px] h-[130px] 2xl:w-[100px] 2xl:h-[100px]">
+              <img
+                class="object-contain h-full"
+                src={brandLogo.src}
+                alt="brand logo"
+              />
+            </div>
             <h1>GREEN THUMBS GARDENING</h1>
           </span>
-          <div class="w-[80%]">
-            <div class="uppercase text-2xl px-3">
+          <div class="w-[80%] 2xl:w-[70%]">
+            <div class="uppercase text-2xl 2xl:text-lg px-3">
               Your oasis of tranquility awaits!
             </div>
-            <div class="text-xl w-[75%] px-3 font-normal">
+            <div class="text-xl 2xl:text-base w-[75%] px-3 font-normal">
               Let's start the journey to your dream garden together.
             </div>
           </div>
-          <div class="w-[80%] flex justify-center">
-            <MainButton>DIG IN!</MainButton>
+          <div class="w-[80%] 2xl:w-[70%] flex justify-center 2xl:justify-end">
+            <MainButton><div class="2xl:text-base">DIG IN!</div></MainButton>
           </div>
         </div>
-        <div class="w-[50%] flex flex-col gap-2 justify-center py-10 px-32">
-          <div class="">
+        <div
+          class="w-[50%] flex flex-col gap-2 justify-center py-10 px-32 2xl:px-8"
+        >
+          <div>
             <img
-              class="h-full w-[350px] object-contain"
+              class="h-full w-[350px] 2xl:w-[300px] object-contain"
               src={heroImage1.src}
               alt="hero showcase 1"
             />
           </div>
           <div class="flex justify-end">
             <img
-              class="h-full w-[350px] object-contain"
+              class="h-full w-[350px] 2xl:w-[300px] object-contain"
               src={heroImage2.src}
               alt="hero showcase 2"
             />
           </div>
           <div class="pl-10">
             <img
-              class="h-full w-[350px] object-contain"
+              class="h-full w-[350px] 2xl:w-[300px] object-contain"
               src={heroImage3.src}
               alt="hero showcase 3"
             />
