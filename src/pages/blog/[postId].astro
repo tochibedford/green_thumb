@@ -14,9 +14,9 @@ const blogPost = blogPosts.find((post) => post.postId === postId);
 
 <Layout title={`${blogPost?.title} - Green Thumbs`}>
   <main class="bg-gBright text-bgShade">
-    <header>
+    <header class="container bg-white py-10">
       <h1
-        class="container bg-white font-extrabold text-5xl lg:text-4xl md:text-3xl text-center flex flex-col items-center gap-10 py-10"
+        class="font-extrabold text-5xl lg:text-4xl md:text-3xl text-center flex flex-col items-center gap-10 py-10"
       >
         {blogPost?.title}
         <img
@@ -25,6 +25,18 @@ const blogPost = blogPosts.find((post) => post.postId === postId);
           alt="blog post head image"
         />
       </h1>
+      <div class="p-5 bg-gBright w-max">
+        <div>
+          <div>
+            <i>Written by: {" "}</i>
+            <strong>{blogPost?.author}</strong>
+          </div>
+        </div>
+        <div>
+          <i>Date: {" "}</i>
+          <div class="inline">{blogPost?.date}</div>
+        </div>
+      </div>
     </header>
     <section
       data-blog-post-content={JSON.stringify(blogPost?.content)}
@@ -32,6 +44,15 @@ const blogPost = blogPosts.find((post) => post.postId === postId);
       class="container bg-white whitespace-break-spaces"
     >
       {blogPost?.content}
+    </section>
+    <section
+      class="container bg-white flex justify-center gap-10 py-10 flex-wrap"
+    >
+      {
+        blogPost?.otherImages.map((imageSource) => (
+          <img class="w-[40%]" src={imageSource} alt="sss" />
+        ))
+      }
     </section>
   </main>
 </Layout>

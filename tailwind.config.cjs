@@ -4,7 +4,11 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   mode: "jit",
-  purge: ["./public/**/*.html", "./src/**/*.astro"],
+  purge: [
+    "./public/**/*.html",
+    "./src/**/*.astro",
+    "./src/pages/blog/**/*.astro",
+  ],
   theme: {
     colors: {
       ...colors,

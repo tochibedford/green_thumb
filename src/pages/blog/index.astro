@@ -1,0 +1,20 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BlogCard from "../../components/BlogCard.astro";
+import blogPosts from "../../blogposts";
+---
+
+<Layout title={`Blog - Green Thumbs`}>
+  <main class="bg-gBright text-bgShade">
+    <header class="container">
+      <h1
+        class="font-extrabold text-5xl lg:text-4xl md:text-3xl text-center flex flex-col items-center gap-10 py-20"
+      >
+        GREEN THUMBS BLOG
+      </h1>
+    </header>
+    <section id="posts" class="container flex flex-col gap-10">
+      {blogPosts.map((post) => <BlogCard blogPost={post} />)}
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,21 @@
+---
+import blogPosts from "../blogposts";
+interface Props {
+  blogPost: (typeof blogPosts)[number];
+}
+
+const { blogPost } = Astro.props;
+---
+
+<a href=`/blog/${blogPost.postId}` class="w-full flex gap-5 bg-white">
+  <div class="flex-[0.3]">
+    <img
+      class="w-full h-full object-cover"
+      src={blogPost.headerImage}
+      alt="blog post head image"
+    />
+  </div>
+  <div class="flex-[0.7] flex flex-col justify-around">
+    <div class="text-3xl font-semibold">{blogPost.title}</div>
+  </div>
+</a>
