@@ -42,7 +42,7 @@ import brandLogo from "../assets/brandLogo.png";
     </button>
 
     <!-- mobile burger menu -->
-    <div class="px-6 bg-gPrimaryLight relative flex items-center">
+    <div class="px-6 bg-gPrimaryLight relative flex items-center relative">
       <input
         id="burger_check"
         type="checkbox"
@@ -69,6 +69,49 @@ import brandLogo from "../assets/brandLogo.png";
         >
         </div>
       </div>
+      <div
+        id="mobile_drop_menu"
+        class="absolute top-[100%] max-h-0 overflow-hidden right-0 w-[300px] bg-gPrimaryLight transition-all duration-300"
+      >
+        <ul
+          id="navMenu_mobile"
+          class="flex flex-col justify-center items-center uppercase"
+        >
+          <li
+            class="hover:bg-gPrimary w-full py-3 text-center text-ellipsis whitespace-nowrap overflow-hidden flex"
+          >
+            <a class="w-full h-full" href="/">Home</a>
+          </li>
+          <li
+            class="hover:bg-gPrimary w-full py-3 text-center text-ellipsis whitespace-nowrap overflow-hidden flex"
+          >
+            <a class="w-full h-full" href="#about">About</a>
+          </li>
+          <li
+            class="hover:bg-gPrimary w-full py-3 text-center text-ellipsis whitespace-nowrap overflow-hidden flex"
+          >
+            <a class="w-full h-full" href="#contact">Contact</a>
+          </li>
+          <li
+            class="hover:bg-gPrimary w-full py-3 text-center text-ellipsis whitespace-nowrap overflow-hidden flex"
+          >
+            <a class="w-full h-full" href="">Plant Info</a>
+          </li>
+          <li
+            class="hover:bg-gPrimary w-full py-3 text-center text-ellipsis whitespace-nowrap overflow-hidden flex"
+          >
+            <a class="w-full h-full" href="">Gardening</a>
+          </li>
+          <li
+            class="hover:bg-gPrimary w-full py-3 text-ellipsis whitespace-nowrap overflow-hidden flex justify-center"
+          >
+            <button class="px-6 py-6 flex justify-center items-center gap-2">
+              <Icon class="flex-1 w-6 h-6" name="mdi:magnify" />
+               SEARCH
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
@@ -80,6 +123,10 @@ import brandLogo from "../assets/brandLogo.png";
 
   #burger_check:checked ~ #burger_opened {
     opacity: 1;
+  }
+
+  #burger_check:checked ~ #mobile_drop_menu {
+    max-height: 500px;
   }
 
   #burger_check:checked ~ #burger_opened div:first-child {
