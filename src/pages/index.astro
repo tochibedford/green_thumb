@@ -72,15 +72,15 @@ import showcaseLarge from "../assets/showcaseLarge.png";
         </div>
       </div>
     </section>
-    <section id="about" class="py-32 text-gShade bg-gBright">
+    <section id="about" class="py-32 2xl:py-24 text-gShade bg-gBright">
       <div class="container flex flex-col items-center gap-10">
         <div class="flex flex-col gap-4">
           <h2
-            class="text-center uppercase text-gPrimary font-bold text-3xl max-w-[1440px]"
+            class="text-center uppercase text-gPrimary font-bold text-3xl 2xl:text-2xl container"
           >
             WHO WE ARE
           </h2>
-          <p class="max-w-[1440px] px-48 text-lg">
+          <p class="container px-48 2xl:px-32 text-lg">
             At GreenThumb Gardens, we believe that a beautiful garden is the
             heart of a thriving home. Our passion for gardening and commitment
             to excellence have made us the go-to choice for all your gardening
@@ -91,9 +91,9 @@ import showcaseLarge from "../assets/showcaseLarge.png";
         </div>
         <div class="flex flex-col gap-4">
           <h3
-            class="text-center uppercase text-gPrimary font-bold text-2xl max-w-[1440px]"
+            class="text-center uppercase text-gPrimary font-bold text-2xl 2xl:text-xl container"
           >
-            WHY COOSE GREEN THUMBS WE ARE
+            WHY COOSE GREEN THUMBS
           </h3>
           <div class="flex gap-20">
             <BorderlessCard imageSrc={reason1.src} caption="EXPERTISE" />
@@ -113,9 +113,9 @@ import showcaseLarge from "../assets/showcaseLarge.png";
         </div>
       </div>
     </section>
-    <section class="py-16 bg-gBright">
+    <section class="py-16 2xl:py-0 bg-gBright">
       <div class="flex justify-center container">
-        <div class="w-[1440px] h-[700px] flex">
+        <div class="container h-[700px] 2xl:h-[500px] flex">
           <div class="flex-[0.3] relative">
             <img
               class="w-full h-full object-contain absolute left-[30%]"
@@ -125,7 +125,7 @@ import showcaseLarge from "../assets/showcaseLarge.png";
           </div>
           <div class="flex-[0.7]">
             <img
-              class="h-full object-cover"
+              class="h-full object-cover 2xl:object-contain"
               src={showcaseLarge.src}
               alt="showcase large image"
             />
@@ -133,14 +133,14 @@ import showcaseLarge from "../assets/showcaseLarge.png";
         </div>
       </div>
     </section>
-    <section id="contact" class="py-16 bg-gBright">
+    <section id="contact" class="py-16 2xl:py-20 bg-gBright">
       <div class="container flex flex-col items-center gap-10">
         <h3
-          class="text-center uppercase text-gPrimary font-bold text-3xl max-w-[1440px]"
+          class="text-center uppercase text-gPrimary font-bold text-3xl 2xl:text-2xl"
         >
           CONTACT US
         </h3>
-        <form class="flex flex-col gap-5 text-xl w-[500px]">
+        <form class="flex flex-col gap-5 text-xl 2xl:text-lg w-[500px]">
           <div class="flex flex-col gap-2">
             <label for="email">Email <span class="text-red-500">*</span></label>
             <input
@@ -163,7 +163,7 @@ import showcaseLarge from "../assets/showcaseLarge.png";
           </div>
           <div class="flex justify-end">
             <MainButton>
-              <span class="text-gBright text-xl">SUBMIT</span>
+              <span class="text-gBright text-xl 2xl:text-lg">SUBMIT</span>
             </MainButton>
           </div>
         </form>
