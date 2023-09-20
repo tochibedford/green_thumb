@@ -17,146 +17,153 @@ import showcaseLarge from "../assets/showcaseLarge.png";
 
 <Layout title="Green Thumbs Gardening - Home">
   <main>
-    <section id="heroSection" class="flex bg-gPrimary text-gBright">
-      <div class="w-[50%] flex flex-col items-end gap-5 py-64">
-        <span
-          id="heroBrand"
-          class="flex text-5xl w-[60%] font-[600] items-center"
-        >
-          <img
-            class="object-contain h-full"
-            src={brandLogo.src}
-            alt="brand logo"
-          />
-          <h1>GREEN THUMBS GARDENING</h1>
-        </span>
-        <div class="w-[60%]">
-          <div class="uppercase text-2xl px-3">
-            Your oasis of tranquility awaits!
+    <section id="heroSection" class="bg-gPrimary text-gBright">
+      <div class="flex container">
+        <div class="w-[50%] flex flex-col items-center gap-5 py-64">
+          <span
+            id="heroBrand"
+            class="flex text-5xl w-[80%] font-[600] items-center"
+          >
+            <img
+              class="object-contain h-full"
+              src={brandLogo.src}
+              alt="brand logo"
+            />
+            <h1>GREEN THUMBS GARDENING</h1>
+          </span>
+          <div class="w-[80%]">
+            <div class="uppercase text-2xl px-3">
+              Your oasis of tranquility awaits!
+            </div>
+            <div class="text-xl w-[75%] px-3 font-normal">
+              Let's start the journey to your dream garden together.
+            </div>
           </div>
-          <div class="text-xl w-[75%] px-3 font-normal">
-            Let's start the journey to your dream garden together.
+          <div class="w-[80%] flex justify-center">
+            <MainButton>DIG IN!</MainButton>
           </div>
         </div>
-        <div class="w-[60%] flex justify-center">
-          <MainButton>DIG IN!</MainButton>
-        </div>
-      </div>
-      <div class="w-[50%] flex flex-col gap-2 justify-center py-10 px-32">
-        <div class="">
-          <img
-            class="h-full w-[400px] object-contain"
-            src={heroImage1.src}
-            alt="hero showcase 1"
-          />
-        </div>
-        <div class="flex justify-end">
-          <img
-            class="h-full w-[400px] object-contain"
-            src={heroImage2.src}
-            alt="hero showcase 2"
-          />
-        </div>
-        <div class="pl-10">
-          <img
-            class="h-full w-[400px] object-contain"
-            src={heroImage3.src}
-            alt="hero showcase 3"
-          />
+        <div class="w-[50%] flex flex-col gap-2 justify-center py-10 px-32">
+          <div class="">
+            <img
+              class="h-full w-[350px] object-contain"
+              src={heroImage1.src}
+              alt="hero showcase 1"
+            />
+          </div>
+          <div class="flex justify-end">
+            <img
+              class="h-full w-[350px] object-contain"
+              src={heroImage2.src}
+              alt="hero showcase 2"
+            />
+          </div>
+          <div class="pl-10">
+            <img
+              class="h-full w-[350px] object-contain"
+              src={heroImage3.src}
+              alt="hero showcase 3"
+            />
+          </div>
         </div>
       </div>
     </section>
-    <section
-      class="py-16 flex flex-col items-center gap-10 text-gShade bg-gBright"
-    >
-      <div class="flex flex-col gap-4">
-        <h2
+    <section id="about" class="py-32 text-gShade bg-gBright">
+      <div class="container flex flex-col items-center gap-10">
+        <div class="flex flex-col gap-4">
+          <h2
+            class="text-center uppercase text-gPrimary font-bold text-3xl max-w-[1440px]"
+          >
+            WHO WE ARE
+          </h2>
+          <p class="max-w-[1440px] px-48 text-lg">
+            At GreenThumb Gardens, we believe that a beautiful garden is the
+            heart of a thriving home. Our passion for gardening and commitment
+            to excellence have made us the go-to choice for all your gardening
+            needs. Whether you have a tiny terrace, a sprawling estate, or
+            anything in between, we have the green thumbs and expertise to
+            transform your outdoor space into a verdant paradise.
+          </p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h3
+            class="text-center uppercase text-gPrimary font-bold text-2xl max-w-[1440px]"
+          >
+            WHY COOSE GREEN THUMBS WE ARE
+          </h3>
+          <div class="flex gap-20">
+            <BorderlessCard imageSrc={reason1.src} caption="EXPERTISE" />
+            <BorderlessCard
+              imageSrc={reason2.src}
+              caption="PERSONALIZED SERVICE"
+            />
+            <BorderlessCard
+              imageSrc={reason3.src}
+              caption="SUSTAINABLE PRACTICES"
+            />
+            <BorderlessCard
+              imageSrc={reason4.src}
+              caption="COMPREHENSIVE SERVICE"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-gBright">
+      <div class="flex justify-center container">
+        <div class="w-[1440px] h-[700px] flex">
+          <div class="flex-[0.3] relative">
+            <img
+              class="w-full h-full object-contain absolute left-[30%]"
+              src={showcaseSmall.src}
+              alt="showcase small image"
+            />
+          </div>
+          <div class="flex-[0.7]">
+            <img
+              class="h-full object-cover"
+              src={showcaseLarge.src}
+              alt="showcase large image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-16 bg-gBright">
+      <div class="container flex flex-col items-center gap-10">
+        <h3
           class="text-center uppercase text-gPrimary font-bold text-3xl max-w-[1440px]"
         >
-          WHO WE ARE
-        </h2>
-        <p class="max-w-[1440px] px-48 text-lg">
-          At GreenThumb Gardens, we believe that a beautiful garden is the heart
-          of a thriving home. Our passion for gardening and commitment to
-          excellence have made us the go-to choice for all your gardening needs.
-          Whether you have a tiny terrace, a sprawling estate, or anything in
-          between, we have the green thumbs and expertise to transform your
-          outdoor space into a verdant paradise.
-        </p>
-      </div>
-      <div class="flex flex-col gap-4">
-        <h3
-          class="text-center uppercase text-gPrimary font-bold text-2xl max-w-[1440px]"
-        >
-          WHY COOSE GREEN THUMBS WE ARE
+          CONTACT US
         </h3>
-        <div class="flex gap-20">
-          <BorderlessCard imageSrc={reason1.src} caption="EXPERTISE" />
-          <BorderlessCard
-            imageSrc={reason2.src}
-            caption="PERSONALIZED SERVICE"
-          />
-          <BorderlessCard
-            imageSrc={reason3.src}
-            caption="SUSTAINABLE PRACTICES"
-          />
-          <BorderlessCard
-            imageSrc={reason4.src}
-            caption="COMPREHENSIVE SERVICE"
-          />
-        </div>
+        <form class="flex flex-col gap-5 text-xl w-[500px]">
+          <div class="flex flex-col gap-2">
+            <label for="email">Email <span class="text-red-500">*</span></label>
+            <input
+              class="px-4 py-2"
+              name="email"
+              type="email"
+              placeholder="john@example.com"
+              required
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="text">Message <span class="text-red-500">*</span></label
+            >
+            <textarea
+              name="message"
+              class="resize-none px-4 py-2"
+              rows="6"
+              required
+              placeholder="Type your message here"></textarea>
+          </div>
+          <div class="flex justify-end">
+            <MainButton>
+              <span class="text-gBright text-xl">SUBMIT</span>
+            </MainButton>
+          </div>
+        </form>
       </div>
-    </section>
-    <section class="py-16 flex justify-center bg-gBright">
-      <div class="w-[1440px] h-[700px] flex">
-        <div class="flex-[0.3] relative">
-          <img
-            class="w-full h-full object-contain absolute left-[30%]"
-            src={showcaseSmall.src}
-            alt="showcase small image"
-          />
-        </div>
-        <div class="flex-[0.7] bg-red-800">
-          <img
-            class="h-full object-cover"
-            src={showcaseLarge.src}
-            alt="showcase large image"
-          />
-        </div>
-      </div>
-    </section>
-    <section class="py-16 flex flex-col items-center gap-10 bg-gBright">
-      <h3
-        class="text-center uppercase text-gPrimary font-bold text-3xl max-w-[1440px]"
-      >
-        CONTACT US
-      </h3>
-      <form class="flex flex-col gap-5 text-xl w-[500px]">
-        <div class="flex flex-col gap-2">
-          <label for="email">Email <span class="text-red-500">*</span></label>
-          <input
-            class="px-4 py-2"
-            name="email"
-            type="email"
-            placeholder="john@example.com"
-            required
-          />
-        </div>
-        <div class="flex flex-col gap-2">
-          <label for="text">Message <span class="text-red-500">*</span></label>
-          <textarea
-            name="message"
-            class="resize-none px-4 py-2"
-            rows="6"
-            required
-            placeholder="Type your message here"></textarea>
-        </div>
-        <div class="flex justify-end">
-          <MainButton>
-            <span class="text-gBright text-xl">SUBMIT</span>
-          </MainButton>
-        </div>
-      </form>
     </section>
   </main>
 </Layout>
