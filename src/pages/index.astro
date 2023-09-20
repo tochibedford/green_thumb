@@ -15,6 +15,7 @@ import showcaseSmall from "../assets/showcaseSmall.png";
 import showcaseLarge from "../assets/showcaseLarge.png";
 ---
 
+<!-- TODO: Pick up from lg breakpoint -->
 <Layout title="Green Thumbs Gardening - Home">
   <main>
     <section id="heroSection" class="bg-gPrimary text-gBright">
@@ -116,14 +117,14 @@ import showcaseLarge from "../assets/showcaseLarge.png";
     <section class="py-16 2xl:py-0 bg-gBright">
       <div class="flex justify-center container">
         <div class="container h-[700px] 2xl:h-[500px] flex">
-          <div class="flex-[0.3] relative">
+          <div class="flex-[0.3] relative flex items-center">
             <img
-              class="w-full h-full object-contain absolute left-[30%]"
+              class="w-full h-full 2xl:w-[80%] object-contain absolute left-[30%]"
               src={showcaseSmall.src}
               alt="showcase small image"
             />
           </div>
-          <div class="flex-[0.7]">
+          <div class="flex-[0.7] flex items-center">
             <img
               class="h-full object-cover 2xl:object-contain"
               src={showcaseLarge.src}
